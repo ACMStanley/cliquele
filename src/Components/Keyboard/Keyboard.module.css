@@ -1,0 +1,44 @@
+.keyboard {
+    
+}
+
+.key{
+    font-family: 'Roboto';
+    height: 100px;
+    width: 75px;
+    margin: 0 5px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 28pt;
+}
+
+.deleteKey{
+    font-family: 'Roboto';
+    height: 100px;
+    width: 112.5px;
+    margin: 0 5px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 28pt;
+    background-color:#FF7979;
+}
+
+.enterKey{
+    font-family: 'Roboto';
+    height: 100px;
+    width: 112.5px;
+    margin: 0 5px;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 28pt;
+    background-color:#79ffa8;
+}
+
+.keyboardRow {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
