@@ -10,6 +10,48 @@
     align-items: center;
 }
 
+.squareComplete {
+    width: 100px;
+    height: 100px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    display: flex;
+    margin: 0px 5px;
+    font-size: 32pt;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #79ffa8;
+}
+
+.squarePartial {
+    width: 100px;
+    height: 100px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    display: flex;
+    margin: 0px 5px;
+    font-size: 32pt;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #ffed4c;
+}
+
+.squareNone {
+    width: 100px;
+    height: 100px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    display: flex;
+    margin: 0px 5px;
+    font-size: 32pt;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #cccccc;
+}
+
 .boardRow {
     display: flex;
     justify-content: center;
