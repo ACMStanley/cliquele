@@ -47,7 +47,10 @@ export default class GameController{
                         matches: out,
                     });
                 }
-            }).catch(setIsCurrentWordValid(false));
+                else{
+                    
+                }
+            }).catch(() => setIsCurrentWordValid(false));
         }
     }
     
