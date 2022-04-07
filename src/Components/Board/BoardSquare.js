@@ -13,6 +13,9 @@ const BoardSquare = (props) => {
         case "NONE":
             style = styles.squareNone;
             break;
+        case "WRONG":
+            style = styles.squareWrong;
+            break;
         default:
             style = styles.square;
     }

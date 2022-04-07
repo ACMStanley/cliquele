@@ -27,7 +27,7 @@ const assessWordMatch = (word) => {
 
 export default class GameController{
 
-    checkWord = (letters,addWordGuess) => {
+    checkWord = (letters,addWordGuess,setIsCurrentWordValid) => {
         let letterList = letters.slice();
         let word = letterList.join("")
         console.log(word);
@@ -47,7 +47,7 @@ export default class GameController{
                         matches: out,
                     });
                 }
-            }).catch(console.log("invalid word"));
+            }).catch(setIsCurrentWordValid(false));
         }
     }
     

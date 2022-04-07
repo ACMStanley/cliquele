@@ -1,5 +1,5 @@
 import './App.css';
-import Game from './components/Game/Game';
+import Game from './Components/Game/Game';
 function App() {
   return (
     <div className="App">
