@@ -1,14 +1,15 @@
-import checkIfWordValid from "../../api/api";
+import Dictionary from "../../words/dictionary";
 
-const WORD = ['J','A','M','E','S'];
+const dict = new Dictionary();
+const WORD_MASTER = dict.getTodaysWord().split('');
 
 const assessWordMatch = (word) => {
-    let matches = Array(WORD.length).fill("NONE");
-
+    let matches = Array(WORD_MASTER.length).fill("NONE");
+    const WORD = WORD_MASTER.slice();
     for(let i = 0; i < WORD.length; i++){
         if(word[i] === WORD[i]){
             matches[i] = "COMPLETE";
-            word[i] = null;
+            WORD[i] = null;
         }
     }
 
@@ -16,12 +17,13 @@ const assessWordMatch = (word) => {
         if(word[i] !== null){
             for(let j = 0; j < WORD.length; j++){
                 if(WORD[j] !== null && word[i] === WORD[j]){
-                    WORD[j] = null;
+                    word[i] = null;
                     matches[i] = "PARTIAL";
                 }
             }
         }
     }
+    console.log(word);
     return matches;
 }
 
@@ -31,7 +33,7 @@ export default class GameController{
         let letterList = letters.slice();
         let word = letterList.join("")
         console.log(word);
-        if(word === WORD.join("")){
+        if(word === WORD_MASTER.join("")){
             const out = assessWordMatch(letterList);
             addWordGuess({
                 letters: letters.slice(),
@@ -39,18 +41,17 @@ export default class GameController{
             });
         }
         else{
-            checkIfWordValid(word).then(isValid => {
-                if(isValid){
-                    const out = assessWordMatch(letterList);
-                    addWordGuess({
-                        letters: letters.slice(),
-                        matches: out,
-                    });
-                }
-                else{
-                    
-                }
-            }).catch(() => setIsCurrentWordValid(false));
+            let isValid = dict.checkIfWordValid(word);
+            if(isValid){
+                const out = assessWordMatch(letterList);
+                addWordGuess({
+                    letters: letters.slice(),
+                    matches: out,
+                });
+            }
+            else{
+                setIsCurrentWordValid(false);
+            }
         }
     }
     

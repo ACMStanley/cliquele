@@ -2,26 +2,31 @@ import BoardSquare from "./BoardSquare";
 import styles from './Board.module.css';
 
 const BoardRow = (props) => {
+    const gameData = props.gameData;
+    let squares = Array(gameData.wordLength).fill(<BoardSquare value={null} />)
 
-    let squares = Array(props.wordLength).fill(<BoardSquare value={null} />)
-    if(!props.isCurrentWordValid){
-        for (let i = 0; i < props.wordLength; i++) {
-            squares[i] = <BoardSquare value={props.lettersEntered[i]} type={"WRONG"}/>;
+
+    if(gameData.activeRow == props.id && !gameData.isCurrentWordValid){
+        for (let i = 0; i < gameData.wordLength; i++) {
+            squares[i] = <BoardSquare value={gameData.lettersEntered[i]} type={"WRONG"}/>;
         }
     }
-    else if (props.wordsEntered.length > 0) {
-        for (let i = 0; i < props.wordLength; i++) {
-            squares[i] = <BoardSquare value={props.wordsEntered[0].letters[i]} type={props.wordsEntered[0].matches[i]}/>;
+    
+
+    else if (gameData.wordsEntered.length > props.id) {
+        for (let i = 0; i < gameData.wordLength; i++) {
+            squares[i] = <BoardSquare value={gameData.wordsEntered[props.id].letters[i]} type={gameData.wordsEntered[props.id].matches[i]}/>;
         }
     }
-    else {
+
+    else if (gameData.activeRow == props.id){
         for (let i = 0;
-            i < (props.lettersEntered.length >= props.wordLength
-                ? props.wordLength
-                : props.lettersEntered.length);
+            i < (gameData.lettersEntered.length >= gameData.wordLength
+                ? gameData.wordLength
+                : gameData.lettersEntered.length);
             i++) {
 
-            squares[i] = <BoardSquare value={props.lettersEntered[i]} type={"EMPTY"}/>;
+            squares[i] = <BoardSquare value={gameData.lettersEntered[i]} type={"EMPTY"}/>;
         }
     }
 
