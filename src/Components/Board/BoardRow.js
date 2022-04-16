@@ -6,7 +6,7 @@ const BoardRow = (props) => {
     let squares = Array(gameData.wordLength).fill(<BoardSquare value={null} />)
 
 
-    if(gameData.activeRow == props.id && !gameData.isCurrentWordValid){
+    if(gameData.activeRow === props.id && !gameData.isCurrentWordValid){
         for (let i = 0; i < gameData.wordLength; i++) {
             squares[i] = <BoardSquare value={gameData.lettersEntered[i]} type={"WRONG"}/>;
         }
@@ -19,7 +19,7 @@ const BoardRow = (props) => {
         }
     }
 
-    else if (gameData.activeRow == props.id){
+    else if (gameData.activeRow === props.id){
         for (let i = 0;
             i < (gameData.lettersEntered.length >= gameData.wordLength
                 ? gameData.wordLength
