@@ -1,6 +1,8 @@
 .game {
     height: 100%;
+    max-width: 90;
     min-width: 50vw;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
