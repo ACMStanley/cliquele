@@ -1,49 +1,50 @@
+$key-width: 36px;
+$key-height: 50px;
+
 .keyboard {
-    width: 100%;
-    border: 1px green solid;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.keyboardRow {
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .key{
     font-family: 'Roboto';
-    height:60px;
-    width: 40px;
-    max-width: 9vw;
-    max-width: 75px;
+    height:$key-height;
+    width: $key-width;
     margin: 0 5px;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 28pt;
+    font-size: 18pt;
 }
 
 .deleteKey{
     font-family: 'Roboto';
-    height:60px;
-    width: 80px;
-    max-width: 18vw;
+    height:$key-height;
+    width: $key-width * 1.5;
     margin: 0 5px;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 22pt;
+    font-size: 18pt;
     background-color:#FF7979;
 }
 
 .enterKey{
     font-family: 'Roboto';
-    height:60px;
-    width: 80px;
-    max-width: 18vw;
+    height:$key-height;
+    width: $key-width * 1.5;
     margin: 0 5px;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 22pt;
+    font-size: 18pt;
     background-color:#79ffa8;
-}
-
-.keyboardRow {
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
 }

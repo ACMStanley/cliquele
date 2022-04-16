@@ -1,5 +1,5 @@
 import KeyboardRow from './KeyboardRow';
-import styles from './Keyboard.module.css';
+import styles from './Keyboard.module.scss';
 
 const row1 = ['Q','W','E','R','T','Y','U','I','O','P']
 const row2 = ['A','S','D','F','G','H','J','K','L']

@@ -1,5 +1,5 @@
 import KeyboardKey from "./KeyboardKey";
-import styles from './Keyboard.module.css';
+import styles from './Keyboard.module.scss';
 
 const KeyboardRow = (props) => {
 
