@@ -1,4 +1,4 @@
-const START_DATE = new Date(2022,4,14);
+const START_DATE = new Date(2022,4,16);
 const ONE_DAY = 24 * 60 * 60 * 1000;
 
 class Dictionary{
