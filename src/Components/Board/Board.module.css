@@ -27,12 +27,11 @@
 }
 
 .squareComplete {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border: solid 1px grey;
     border-radius: 5px;
     display: flex;
-    margin: 0px 5px;
     font-size: 32pt;
     justify-content: center;
     align-items: center;
@@ -41,12 +40,11 @@
 }
 
 .squarePartial {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border: solid 1px grey;
     border-radius: 5px;
     display: flex;
-    margin: 0px 5px;
     font-size: 32pt;
     justify-content: center;
     align-items: center;
