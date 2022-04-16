@@ -1,4 +1,5 @@
 import BoardRow from "./BoardRow";
+import styles from "./Board.module.css";
 
 const Board = (props) => {
     const gameData = props.gameData;
@@ -9,7 +10,7 @@ const Board = (props) => {
     }
     
     return (
-        <div>
+        <div className={styles.board}>
             {rows}
         </div>
     )

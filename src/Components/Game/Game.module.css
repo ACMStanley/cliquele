@@ -1,13 +1,16 @@
 .game {
     height: 100%;
-    max-width: 90;
+    width: 100%;
     min-width: 50vw;
     
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid blue;
 }
 
 .maintitle{
-    font-size: 100px;
+    height: 5%;
+    font-size: 32pt;
 }

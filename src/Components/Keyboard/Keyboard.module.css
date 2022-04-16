@@ -1,11 +1,12 @@
 .keyboard {
-    
+    width: 100%;
+    border: 1px green solid;
 }
 
 .key{
     font-family: 'Roboto';
-    height: 100px;
-    width: 8%;
+    height:60px;
+    width: 40px;
     max-width: 75px;
     margin: 0 5px;
     display: inline-block;
@@ -16,8 +17,8 @@
 
 .deleteKey{
     font-family: 'Roboto';
-    height: 100px;
-    width: 112.5px;
+    height:60px;
+    width: 80px;
     margin: 0 5px;
     display: inline-block;
     border: 1px solid grey;
@@ -28,8 +29,8 @@
 
 .enterKey{
     font-family: 'Roboto';
-    height: 100px;
-    width: 112.5px;
+    height:60px;
+    width: 80px;
     margin: 0 5px;
     display: inline-block;
     border: 1px solid grey;
