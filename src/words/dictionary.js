@@ -16,7 +16,7 @@ class Dictionary{
             "NASTY",
             "OSCAR",
             "RACHE",
-            "SAMCL",
+            "SAMUE",
             "SHANN"
         ]
     }
