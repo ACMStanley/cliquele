@@ -78,7 +78,7 @@ const Game = () => {
                 gameData={gameData}
             />
             {
-                !isGameFinished ? <Keyboard keyFunctions={keyFunctions} /> : <VictoryTile didWin={isGameWon} />
+                !isGameFinished ? <Keyboard keyFunctions={keyFunctions} /> : <VictoryTile didWin={isGameWon} wordsEntered={wordsEntered}/>
             }
 
         </div>
