@@ -1,5 +1,7 @@
-$key-width: 36px;
+$key-width: 30px;
 $key-height: 50px;
+$key-margin: 0 2px;
+$key-font-size: 16pt;
 
 .keyboard {
     width: 99%;
@@ -18,22 +20,22 @@ $key-height: 50px;
     font-family: 'Roboto';
     height:$key-height;
     width: $key-width;
-    margin: 0 5px;
+    margin: $key-margin;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 18pt;
+    font-size: $key-font-size;
 }
 
 .deleteKey{
     font-family: 'Roboto';
     height:$key-height;
     width: $key-width * 1.5;
-    margin: 0 5px;
+    margin: $key-margin;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 18pt;
+    font-size: $key-font-size;
     background-color:#FF7979;
 }
 
@@ -45,6 +47,6 @@ $key-height: 50px;
     display: inline-block;
     border: 1px solid grey;
     border-radius: 5px;
-    font-size: 18pt;
+    font-size: $key-font-size;
     background-color:#79ffa8;
 }
