@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 const URL = "https://cliquele.vercel.app/";
 
 const VictoryTile = (props) => {
+    const [copyText,setCopyText] = useState("Copy result to clipboard: ");
 
     let resultText;
 
@@ -29,13 +32,14 @@ const VictoryTile = (props) => {
     )
 
     const handleOnClick = () => {
-        navigator.clipboard.writeText(resultText)
+        navigator.clipboard.writeText(resultText);
+        setCopyText("COPIED! ");
     }
 
     return(
         <div>
             {props.didWin ? <h1>Congrats. You Won!</h1> : <h1>Loser!</h1>}
-            <span>Copy result to clipboard: </span>
+            <span>{copyText}</span>
             <button onClick={handleOnClick}>📋</button>
         </div>
     )
